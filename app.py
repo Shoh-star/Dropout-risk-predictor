@@ -4,9 +4,8 @@ import joblib
 import random
 
 # Load your trained model and feature list
-model = joblib.load(r"C:\Users\PRO-TEC\IdeaProjects\dropout_model.pkl")
-feature_columns = joblib.load(
-    r"C:\Users\PRO-TEC\IdeaProjects\model_features.pkl")
+model = joblib.load("dropout_model.pkl")
+feature_columns = joblib.load("model_features.pkl")
 
 st.set_page_config(page_title="Dropout Risk Predictor", layout="centered")
 st.title("🎓 Student Dropout Risk Predictor")
@@ -56,3 +55,4 @@ if uploaded_file:
         )
     except Exception as e:
         st.error(f"Prediction failed: {e}")
+
