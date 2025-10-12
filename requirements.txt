@@ -1,0 +1,6 @@
+what needs to be installed from command prompt:
+streamlit
+pandas
+scikit-learn
+joblib
+imbalanced-learn
