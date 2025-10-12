@@ -12,8 +12,17 @@ from sklearn.metrics import accuracy_score, classification_report, r2_score, con
 df = pd.read_csv('Dropout_Student.csv', sep=';')
 
 scaler = StandardScaler()
-X = df.drop(["Mother's occupation", "Father's occupation", "Mother's qualification", "Father's qualification", 'Student_ID', 'Full_Name', 'Target', 'Marital status',
-            'Daytime/evening attendance\t', 'Age at enrollment', 'Displaced', 'Curricular units 2nd sem (enrolled)', 'Curricular units 1st sem (enrolled)', 'Previous qualification', 'Previous qualification (grade)', 'Debtor', 'Curricular units 2nd sem (credited)', 'Curricular units 1st sem (credited)', 'Gender', 'Nacionality', 'International', 'Educational special needs'], axis=1)
+# List of columns to drop if they exist
+optional_cols = [
+    "Mother's occupation", "Father's occupation", "Mother's qualification", "Father's qualification",
+    'Student_ID', 'Full_Name', 'Target', 'Marital status', 'Daytime/evening attendance\t',
+    'Age at enrollment', 'Displaced', 'Curricular units 2nd sem (enrolled)',
+    'Curricular units 1st sem (enrolled)', 'Previous qualification', 'Previous qualification (grade)',
+    'Debtor', 'Curricular units 2nd sem (credited)', 'Curricular units 1st sem (credited)',
+    'Gender', 'Nacionality', 'International', 'Educational special needs'
+]
+cols_to_drop = [col for col in optional_cols if col in df.columns]
+X = df.drop(cols_to_drop, axis=1)
 y = (df['Target'] == 'Dropout').astype(int)
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=42)
@@ -40,3 +49,4 @@ print(classification_report(y_train_oversample, prediction2))
 joblib.dump(model, "dropout_model.pkl")
 feature_columns = X.columns.tolist()
 joblib.dump(feature_columns, "model_features.pkl")
+
