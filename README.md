@@ -35,6 +35,6 @@ Your CSV file's columns must EXACTLY MATCH the following columns:
 18.                                  Inflation rate
 19.                                             GDP
 20.                                         Target
-❗️**Important:** NOTE THAT YOUR FILE SHOULD NOT CONTAIN MORE OR LESS COLUMNS THAN WHAT WAS GIVEN ABOVE!
+❗️⚠️**IMPORTANT!!!!!:** NOTE THAT YOUR FILE SHOULD NOT CONTAIN MORE OR LESS COLUMNS THAN WHAT WAS GIVEN ABOVE!
 ## Additional notes:
 GDP, Unemployment rate, Inflation rate means you have to enter the values of mentioned fetaures that YOUR country has.
