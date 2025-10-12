@@ -15,7 +15,7 @@ This app helps university administrators identify students at risk of dropping o
 ## Deployment
 This app is ready for Streamlit Cloud. Just connect this repo and select `app.py` as the entry point.
 ## CSV column requirements:
-Your CSV file columns must EXACTLY MATCH the following columns:
+Your CSV file's columns must EXACTLY MATCH the following columns:
 1.                                       Student_ID
 2.                                       Full_Name
 3.                                Application order
