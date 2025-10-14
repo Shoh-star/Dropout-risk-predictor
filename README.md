@@ -26,7 +26,7 @@ Your CSV file's columns must EXACTLY MATCH the following columns:
 9.           Curricular units 1st sem (evaluations)
 10.              Curricular units 1st sem (approved)
 11.                Curricular units 1st sem (grade)
-12.  Curricular units 1st sem (without evaluations)
+12.   Curricular units 1st sem (without evaluations)
 13.          Curricular units 2nd sem (evaluations)
 14.             Curricular units 2nd sem (approved)
 15.                Curricular units 2nd sem (grade)
