@@ -13,7 +13,7 @@ df = pd.read_csv('Dropout_Student.csv', sep=';')
 
 scaler = StandardScaler()
 # List of columns to drop if they exist
-optional_cols = ['Application mode', 
+optional_cols = ['Application mode', 'Email',
     "Mother's occupation", "Father's occupation", "Mother's qualification", "Father's qualification",
     'Student_ID', 'Full_Name', 'Target', 'Marital status', 'Daytime/evening attendance\t',
     'Age at enrollment', 'Displaced', 'Curricular units 2nd sem (enrolled)',
@@ -49,5 +49,6 @@ print(classification_report(y_train_oversample, prediction2))
 joblib.dump(model, "dropout_model.pkl")
 feature_columns = X.columns.tolist()
 joblib.dump(feature_columns, "model_features.pkl")
+
 
 
